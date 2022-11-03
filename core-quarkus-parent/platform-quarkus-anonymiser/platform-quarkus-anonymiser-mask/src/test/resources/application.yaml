@@ -1,0 +1,22 @@
+dt:
+  config:
+    anonymizer:
+      properties:
+        sensitive-keys: AUTHORIZATION,USER-TOKEN
+        masked-string: "**Masked**"
+        enabled: true
+        mask-patterns:
+          - masked-key: "$1$2$3$4**Masked**$6"
+            pattern: "(password[\\w\\d\\s.-]*?)(\"[\\s]*,[\\s]*\")(\\S+?)(\"[\\s]*:[\\s]*\")(\\S+?)(\".*?)"
+          - masked-key: "$1$2$3$4**Masked**$6"
+            pattern: "(ssid-pass)(\"[\\s]*,[\\s]*\")(\\S+?)(\"[\\s]*:[\\s]*\")(\\S+?)(\".*?)"
+          - masked-key: "$1$2**Masked**$4"
+            pattern: "(password[\\w\\d\\s.-]*?)(\"[\\s]*:[\\s]*\")(\\S+?)(\".*?)"
+          - masked-key: "$1$2**Masked**$4"
+            pattern: "(ssid-pass)(\"[\\s]*:[\\s]*\")(\\S+?)(\".*?)"
+          - masked-key: "$1$2**Masked**$4"
+            pattern: "(password[^\"]*?)(=)(\\S+?)([,{\"}].*?)"
+          - masked-key: "$1$2**Masked**$4"
+            pattern: "(ssid-pass[^\"]*?)(=)(\\S+?)([,{\"})].*?)"
+          - masked-key: "$1$2**Masked**$4"
+            pattern: "(KeyPassphrase.*?)(,[\\S\\s]+?value=)(\\S+?)(,.*?)"

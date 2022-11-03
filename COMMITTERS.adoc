@@ -1,0 +1,63 @@
+= Information for Quarkus Committers
+
+This document contains useful information for ++toBeUpdated++ committers.
+
+[NOTE]
+====
+It is a work in progress, so if you think information is missing/unclear/inadequate,
+please reach out to us on the `++toBeUpdated++` mailing-list.
+====
+
+This document has a lot of information.
+It is not a set of strict rules, it is here to guide you.
+If you forget to do something, miss something, don't worry, it happens.
+
+Do your best and that will already be a lot :).
+
+== Merging Pull Requests
+
+++toBeUpdated++
+
+[[release-schedule]]
+== Release Schedule
+
+The release schedule is posted here: ++toBeUpdated++ .
+
+++toBeUpdated++
+
+== Dependency Upgrades
+
+++toBeUpdated++
+
+[[backward-compatibility]]
+== Backward Compatibility
+
+++toBeUpdated++
+
+== Pull Request Title
+
+++toBeUpdated++
+
+== Issues Fixed
+
+++toBeUpdated++
+
+== Affecting Labels and Milestones
+
+++toBeUpdated++
+
+[[backporting-process]]
+== Backporting Process
+
+++toBeUpdated++
+
+== Good First Issues
+
+++toBeUpdated++
+
+== I Did Something Wrong, What Should I Do?
+
+Take a deep breath and don't worry, it happens.
+
+Just ping `++toBeUpdated++` on GitHub or `++toBeUpdated++` on ++toBeUpdated++,
+and we will find a solution.

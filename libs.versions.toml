@@ -1,0 +1,28 @@
+[versions]
+corequarkus="1.0.0-SNAPSHOT"
+java="17"   # Java version is not used from here instead used from buildSrc/src/main/kotlin/java-base-conventions.gradle.kts
+quarkusio="2.13.2.Final"
+groovy = "3.0.5"
+
+lombok="1.18.24"
+
+checkstyle = "8.37"
+
+[libraries]
+groovy-core = { module = "org.codehaus.groovy:groovy", version.ref = "groovy" }
+groovy-json = { module = "org.codehaus.groovy:groovy-json", version.ref = "groovy" }
+groovy-nio = { module = "org.codehaus.groovy:groovy-nio", version.ref = "groovy" }
+commons-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = { strictly = "[3.8, 4.0[", prefer="3.9" } }
+lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok"}
+
+#Quarkus Dependency
+quarkus-yaml = { group = "io.quarkus", name = "quarkus-config-yaml", version.ref = "quarkusio"}
+quarkus-resteasy = { group = "io.quarkus", name = "quarkus-resteasy", version.ref = "quarkusio"}
+
+[bundles]
+groovy = ["groovy-core", "groovy-json", "groovy-nio"]
+
+[plugins]
+jmh = { id = "me.champeau.jmh", version = "0.6.5" }
+java-application = { id = "java-application-conventions", version.ref = "corequarkus"}
+java-library = { id = "java-library-conventions", version.ref = "corequarkus"}
