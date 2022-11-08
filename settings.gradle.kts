@@ -46,3 +46,9 @@ include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonym
 //findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-core")?.name = "platform-quarkus-anonymiser-core"
 include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask")
 //findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask")?.name = "platform-quarkus-anonymiser-mask"
+include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:runtime")
+findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:runtime")?.name = "runtime"
+include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:deployment")
+findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:deployment")?.name = "deployment"
+include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:tests")
+findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:tests")?.name = "tests"

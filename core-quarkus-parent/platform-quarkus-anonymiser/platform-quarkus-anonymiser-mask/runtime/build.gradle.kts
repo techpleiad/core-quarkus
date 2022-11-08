@@ -1,21 +1,20 @@
 plugins {
-    `java-library-conventions`
+    id("java-library-conventions")
+    id("maven-publish")
     id("org.kordamp.gradle.jandex") version("1.0.0")
 }
 
-version = "unspecified"
+group = "my-groupId"
+version = "my-version"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    api(libs.quarkus.resteasy)
-    implementation(libs.quarkus.yaml)
-    compileOnly(libs.lombok)
+    implementation(project(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-core"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
-
 }
 
 tasks.getByName<Test>("test") {
