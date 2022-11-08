@@ -1,6 +1,6 @@
 plugins {
     java
-    id("io.quarkus") version libs.versions.quarkusio
+    id("io.quarkus")
 }
 
 version = "unspecified"

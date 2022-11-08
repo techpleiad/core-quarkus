@@ -1,4 +1,4 @@
-package org.quarkus.extension.anonymiser.mask;
+package org.quarkus.extension.anonymiser.core;
 
 import io.smallrye.config.ConfigMapping;
 

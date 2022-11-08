@@ -1,8 +1,8 @@
 package org.quarkus.extension.anonymiser.mask;
 
 import io.vertx.core.MultiMap;
+import org.quarkus.extension.anonymiser.core.IDTAnonymizerConfiguration;
 import org.quarkus.extension.anonymiser.core.IDataAnonymiser;
-import org.quarkus.extension.anonymiser.mask.IDTAnonymizerConfiguration;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

@@ -17,27 +17,32 @@ dependencyResolutionManagement {
 }
 
 pluginManagement {
-
-//    val quarkusPluginVersion: String by settings
-//
-//    repositories.mavenLocal()
-//    repositories.mavenCentral()
-    repositories.gradlePluginPortal()
-    repositories.mavenCentral()
+    val quarkusPluginVersion: String by settings
+    val quarkusPluginId: String by settings
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+        mavenLocal()
+    }
     plugins {
+        id(quarkusPluginId) version quarkusPluginVersion
         id("java-library-conventions") version ("1.0.0-SNAPSHOT")
         id("java-application-conventions") version ("1.0.0-SNAPSHOT")
-//        id("io.quarkus") version quarkusPluginVersion
     }
 }
 
 rootProject.name = "core-quarkus"
 
-include("core-quarkus-parent")
 include("core-quarkus-examples")
-include("core-quarkus-parent:platform-quarkus-anonymiser")
-findProject(":core-quarkus-parent:platform-quarkus-anonymiser")?.name = "platform-quarkus-anonymiser"
+//findProject(":core-quarkus-parent:platform-quarkus-multitenant")?.name = "platform-quarkus-multitenant"
+include("core-quarkus-parent:platform-quarkus-multitenant:platform-quarkus-multitenant-rest")
+//findProject(":core-quarkus-parent:platform-quarkus-multitenant:platform-quarkus-multitenant-rest")?.name = "platform-quarkus-multitenant-rest"
+include("core-quarkus-parent:platform-quarkus-multitenant:platform-quarkus-multitenant-core")
+//findProject(":core-quarkus-parent:platform-quarkus-multitenant:platform-quarkus-multitenant-core")?.name = "platform-quarkus-multitenant-core"
+//findProject(":core-quarkus-parent:platform-quarkus-context")?.name = "platform-quarkus-context"
+include("core-quarkus-parent:platform-quarkus-context:platform-quarkus-request-context")
+//findProject(":core-quarkus-parent:platform-quarkus-context:platform-quarkus-request-context")?.name = "platform-quarkus-request-context"
 include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-core")
-findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-core")?.name = "platform-quarkus-anonymiser-core"
+//findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-core")?.name = "platform-quarkus-anonymiser-core"
 include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask")
-findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask")?.name = "platform-quarkus-anonymiser-mask"
+//findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask")?.name = "platform-quarkus-anonymiser-mask"

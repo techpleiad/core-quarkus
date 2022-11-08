@@ -19,6 +19,9 @@ lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok"}
 quarkus-yaml = { group = "io.quarkus", name = "quarkus-config-yaml", version.ref = "quarkusio"}
 quarkus-resteasy = { group = "io.quarkus", name = "quarkus-resteasy", version.ref = "quarkusio"}
 
+#Quarkus Reactive
+quarkus-resteasy-reactive = {group = "io.quarkus", name = "quarkus-resteasy-reactive", version.ref = "quarkusio"}
+
 [bundles]
 groovy = ["groovy-core", "groovy-json", "groovy-nio"]
 

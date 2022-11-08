@@ -1,5 +1,6 @@
 plugins {
     `java-library-conventions`
+    id("io.quarkus")
 }
 
 version = "unspecified"
