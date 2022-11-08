@@ -1,6 +1,6 @@
 plugins {
     `java-library-conventions`
-    id("io.quarkus")
+//    id("io.quarkus")
 }
 
 version = "unspecified"
@@ -15,6 +15,8 @@ dependencies {
     compileOnly(libs.lombok)
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:2.13.2.Final"))
+
 }
 
 tasks.getByName<Test>("test") {

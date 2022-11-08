@@ -1,6 +1,6 @@
 plugins {
     java
-    id("io.quarkus")
+//    id("io.quarkus")
 }
 
 version = "unspecified"

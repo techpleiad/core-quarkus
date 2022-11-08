@@ -11,7 +11,7 @@ val versionTxt = libs.versions.corequarkus.get()
 
 plugins {
     java
-    id("io.quarkus")
+//    id("io.quarkus")
 }
 
 allprojects {
