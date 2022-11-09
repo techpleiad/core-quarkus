@@ -26,6 +26,7 @@ pluginManagement {
     }
     plugins {
         id(quarkusPluginId) version quarkusPluginVersion
+        id("io.quarkus.extension") version("2.13.2.Final")
         id("java-library-conventions") version ("1.0.0-SNAPSHOT")
         id("java-application-conventions") version ("1.0.0-SNAPSHOT")
     }
@@ -47,8 +48,8 @@ include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonym
 include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask")
 //findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask")?.name = "platform-quarkus-anonymiser-mask"
 include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:runtime")
-findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:runtime")?.name = "runtime"
+//findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:runtime")?.name = "runtime"
 include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:deployment")
-findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:deployment")?.name = "deployment"
+//findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:deployment")?.name = "deployment"
 include("core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:tests")
-findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:tests")?.name = "tests"
+//findProject(":core-quarkus-parent:platform-quarkus-anonymiser:platform-quarkus-anonymiser-mask:tests")?.name = "tests"

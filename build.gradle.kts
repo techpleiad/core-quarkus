@@ -12,6 +12,7 @@ val versionTxt = libs.versions.corequarkus.get()
 plugins {
     java
 //    id("io.quarkus")
+    id("io.quarkus.extension") version("2.13.2.Final")
 }
 
 allprojects {
@@ -26,6 +27,7 @@ val quarkusPlatformVersion: String by project
 dependencies {
     implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
     implementation("io.quarkus:quarkus-arc")
+    annotationProcessor("io.quarkus:quarkus-extension-processor:2.13.0.Final")
 //    implementation("io.quarkus:quarkus-resteasy-reactive")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
