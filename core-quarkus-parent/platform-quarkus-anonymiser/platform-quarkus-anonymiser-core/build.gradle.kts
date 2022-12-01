@@ -1,6 +1,6 @@
 plugins {
     `java-library-conventions`
-    id("org.kordamp.gradle.jandex") version("1.0.0")
+    id("org.kordamp.gradle.jandex") version("0.9.0")
 }
 
 version = "unspecified"

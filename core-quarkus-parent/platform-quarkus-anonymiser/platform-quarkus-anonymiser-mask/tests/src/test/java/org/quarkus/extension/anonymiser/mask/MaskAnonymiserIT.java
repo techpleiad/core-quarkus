@@ -13,7 +13,7 @@ import javax.inject.Inject;
 import java.util.*;
 
 @QuarkusTest
-class MaskAnonymiserUnitTest {
+class MaskAnonymiserIT {
 
     @Inject
     private MaskAnonymiser maskAnonymiser;
@@ -79,7 +79,6 @@ class MaskAnonymiserUnitTest {
     @Test
     public void givenHttpHeaders_whenAnonymized_thenReturnResult() {
         //Given:
-//        final HttpHeaders httpHeaders = new HttpHeaders();
         final QuarkusHttpHeaders httpHeaders = new QuarkusHttpHeaders();
         final String sensitiveKey = "authorization";
         final String sensitiveValue = "Bearer Token";
@@ -94,16 +93,11 @@ class MaskAnonymiserUnitTest {
         //Then:
         Assertions.assertEquals("**Masked**", result.get(sensitiveKey));
         Assertions.assertEquals("**Masked**", result.get("user-token"));
-        Assertions.assertEquals("pl", ((List) result.get(normalKey)).get(0));
+        Assertions.assertEquals("pl", result.get(normalKey));
     }
 
     @Test
     void givenPattern1_whenAnonymize_thenMaskPassword() {
-        //given
-//        final List<IDTAnonymizerConfiguration.IDTRegexPattern> maskPatterns = new ArrayList<>();
-//        maskPatterns.add(new IDTAnonymizerConfiguration.IDTRegexPattern(Pattern
-//                .compile("(password[\\w\\d\\s.-]*?)(\"[\\s]*:[\\s]*\")(\\S+?)(\".*?)", CASE_INSENSITIVE), "$1$2**Masked**$4"));
-//        Mockito.when(IDTAnonymizerConfiguration.getMaskPatterns()).thenReturn(maskPatterns);
 
         //when
         final String input = "{\"password-2.4 Ghz\":\"abc123\"}";
@@ -115,11 +109,6 @@ class MaskAnonymiserUnitTest {
 
     @Test
     void givenPattern2_whenAnonymize_thenMaskPassword() {
-        //given
-//        final List<IDTAnonymizerConfiguration.IDTRegexPattern> maskPatterns = new ArrayList<>();
-//        maskPatterns.add(new IDTAnonymizerConfiguration.IDTRegexPattern(Pattern
-//                .compile("(password[\\w\\d]*?)(\"[\\s]*,[\\s]*\")(\\S+?)(\"[\\s]*:[\\s]*\")(\\S+?)(\".*?)", CASE_INSENSITIVE), "$1$2$3$4**Masked**$6"));
-//        Mockito.when(IDTAnonymizerConfiguration.getMaskPatterns()).thenReturn(maskPatterns);
 
         //when
         final String input = "{\"name\" : \"password1\", \"value\" : \"abc123\"}";
@@ -131,13 +120,6 @@ class MaskAnonymiserUnitTest {
 
     @Test
     void givenPatterns_whenAnonymize_thenMaskSsidPass() {
-        //given
-//        final List<IDTAnonymizerConfiguration.IDTRegexPattern> maskPatterns = new ArrayList<>();
-//        maskPatterns.add(new IDTAnonymizerConfiguration.IDTRegexPattern(Pattern
-//                .compile("(ssid-pass)(\"[\\s]*,[\\s]*\")(\\S+?)(\"[\\s]*:[\\s]*\")(\\S+?)(\".*?)", CASE_INSENSITIVE), "$1$2$3$4**Masked**$6"));
-//        maskPatterns.add(new IDTAnonymizerConfiguration.IDTRegexPattern(Pattern.compile("(ssid-pass)(\"[\\s]*:[\\s]*\")(\\S+?)(\".*?)", CASE_INSENSITIVE), "$1$2**Masked**$4"));
-//        maskPatterns.add(new IDTAnonymizerConfiguration.IDTRegexPattern(Pattern.compile("(ssid-pass[^\"]*?)(=)(\\S+?)([,{\"})].*?)", CASE_INSENSITIVE), "$1$2**Masked**$4"));
-//        Mockito.when(IDTAnonymizerConfiguration.getMaskPatterns()).thenReturn(maskPatterns);
 
         //when
         final String input1 = "{\"name\" : \"ssid-pass\", \"value\" : \"abc123\"}";
