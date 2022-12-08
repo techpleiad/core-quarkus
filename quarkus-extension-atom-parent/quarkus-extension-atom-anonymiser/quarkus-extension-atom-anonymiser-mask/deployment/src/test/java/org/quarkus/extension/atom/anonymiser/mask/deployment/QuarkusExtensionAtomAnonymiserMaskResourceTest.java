@@ -4,6 +4,7 @@ import io.quarkus.test.junit.QuarkusTest;
 import io.quarkus.vertx.http.runtime.QuarkusHttpHeaders;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.quarkus.extension.atom.anonymiser.core.IDataAnonymiser;
 import org.quarkus.extension.atom.anonymiser.mask.MaskAnonymiser;
 
 import javax.inject.Inject;
@@ -14,7 +15,7 @@ public class QuarkusExtensionAtomAnonymiserMaskResourceTest {
 
 
     @Inject
-    private MaskAnonymiser maskAnonymiser;
+    private IDataAnonymiser maskAnonymiser;
 
     @Test
     public void givenSensitiveKeyAndValue_whenAnonymized_thenReturnMaskedValue() {

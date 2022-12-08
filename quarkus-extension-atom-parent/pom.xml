@@ -14,6 +14,7 @@
 
     <modules>
         <module>quarkus-extension-atom-anonymiser</module>
+        <module>quarkus-extension-atom-multitenant</module>
     </modules>
 
     <properties>
