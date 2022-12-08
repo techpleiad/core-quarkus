@@ -1,0 +1,3 @@
+org/quarkus/extension/atom/anonymiser/core/IDTAnonymizerConfiguration.class
+org/quarkus/extension/atom/anonymiser/core/IDTAnonymizerConfiguration$IDTRegexPattern.class
+org/quarkus/extension/atom/anonymiser/core/IDataAnonymiser.class
