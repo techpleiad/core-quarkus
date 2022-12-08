@@ -4,11 +4,11 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.quarkus.extension.atom</groupId>
-    <artifactId>quarkus-extension-atom-anonymiser-mask-parent</artifactId>
+    <artifactId>quarkus-extension-atom-anonymiser-mask</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
   <artifactId>quarkus-extension-atom-anonymiser-mask-runtime</artifactId>
-  <name>anonymiser-mask - Runtime</name>
+  <name>Anonymiser-Mask - Runtime</name>
   <description>anonymiser-mask</description>
   <dependencies>
     <dependency>

@@ -9,10 +9,10 @@
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>quarkus-extension-atom-anonymiser-mask-parent</artifactId>
+  <artifactId>quarkus-extension-atom-anonymiser-mask</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>anonymiser-mask - Parent</name>
+  <name>Anonymiser-Mask - Parent</name>
 
   <modules>
     <module>deployment</module>
